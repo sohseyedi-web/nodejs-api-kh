@@ -11,7 +11,7 @@ const {
   validateUpdateProfileSchema,
 } = require("../validators/auth.schema");
 const bcrypt = require("bcrypt");
-const UserModel = require("../models/user.models");
+const { UserModel } = require("../models/user.models");
 
 const checkUserExist = async (email) => {
   return await UserModel.findOne({ email });
